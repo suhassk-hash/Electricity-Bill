@@ -1,16 +1,16 @@
 import java.util.Scanner;
-public class Ebill {
+public class Java {
      public static void main(String[] args)
     {
         String consumername ;
-        double phonenumber ;
+        int phonenumber ;
         double units, totalunitcost=0.0 ,totalcost=0.0 ; 
         {
             Scanner sc = new Scanner (System.in) ;
             System.out.println("Enter Consumer name") ;
             String Consumername=sc.nextLine() ;
             System.out.println("Enter Phone number") ;
-            double Phonenumber = sc.nextDouble() ;
+            phonenumber = sc.nextInt() ;
             System.out.println("Enter Number of units consumed");
             units = sc.nextDouble();
             if (units>0 && units <=50)
@@ -25,9 +25,9 @@ public class Ebill {
             totalunitcost = 50*7.00 + 50*8.50 + 200*9.90+ 200*10.40+ ((units-500)*11.00);
             totalcost=totalunitcost+65;
             System.out.println(Consumername);
-            System.out.println(Phonenumber);
-            System.out.println(units);
-            System.out.println(totalcost);  
+            System.out.println("Phone Number:"+phonenumber);
+            System.out.println("Total Units:"+units);
+            System.out.println("Total Cost:"+totalcost);  
             System.out.println("Monthly minimum energy charges: Rs.65/month for single phase supply");
         }
     }
